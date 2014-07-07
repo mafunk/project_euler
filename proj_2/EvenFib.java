@@ -41,16 +41,27 @@ public class EvenFib {
 		array.add(2);
 		length = 2;
 		
-		for( int i = 2; i < max/100000; i++){
-			if((array.get(i-2) + array.get(i-1)) < max){ 
-				array.add( (array.get(i-2) + array.get(i-1)) );
-				//System.out.print((array.get(i-2) + array.get(i-1)) + "  ");
-				length++;
+		for( int i = 2; i < max/10000; i++){
+			
+			int sum = array.get(i-2) + array.get(i-1);
+			
+			if(sum < max){
+				array.add(sum);
 			} // End If
 		} // End For Loop
 	} // End Constructor
 	
 	// Methods
+	public void print(){
+		System.out.println(" Fib numbers : ");
+		
+		for( int i = 0; i < length ; i++ ){
+			System.out.print( array.get(i) + "  " );
+		} // End For Loop
+		
+		System.out.println("");
+	} // End print()
+	
 	public void sumEven(){
 		int sum =0;
 		
@@ -84,6 +95,8 @@ public class EvenFib {
 	public static void main (String args[]) {
 		int max = 4000000;
 		EvenFib obj = new EvenFib(max);
+		
+		obj.print();
 		
 		//obj.sumEven();
 		
