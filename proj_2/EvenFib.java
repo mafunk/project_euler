@@ -44,7 +44,7 @@ public class EvenFib {
 		for( int i = 2; i < max/100000; i++){
 			if((array.get(i-2) + array.get(i-1)) < max){ 
 				array.add( (array.get(i-2) + array.get(i-1)) );
-				System.out.print((array.get(i-2) + array.get(i-1)) + "  ");
+				//System.out.print((array.get(i-2) + array.get(i-1)) + "  ");
 				length++;
 			} // End If
 		} // End For Loop
